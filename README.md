@@ -10,6 +10,8 @@ De wagen moet autonoom rijden binnen een parcours en aantonen dat alle deelopdra
 - Custom AXI IP blok(ken) voor ultrasoon sensoren
 - **Moet klaar zijn:** SoC hardware platform, C code
 - **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
+[Ultrasoon Video](https://youtu.be/_wWzT27MwKY)
+[Blokdesign](https://github.com/Empel06/SOC-Auto/blob/main/Ultrasoon/BD-Ultrasoon.pdf)
 
 ### 2. Snelheidssensoren & Motor Control (10 punten)
 - Custom AXI IP blok voor snelheidssensoren, motor control via AXI/Timer blok
