@@ -1,20 +1,37 @@
 # SOC-Auto
-Wagen moet rondrijden binnen een parcour, waarbij je aantoont dat alle vorige deelopdrachten werken.
 
-Deadline: Week van 17 maart 2025
-Punten: 15
+## Overzicht
+De wagen moet autonoom rijden binnen een parcours en aantonen dat alle deelopdrachten correct werken.  
+**Totaal:** 60 punten  
 
+## Deelopdrachten
 
-Werking Ultrasoon sensoren, deze moeten werken via Custom AXI IP blok(ken).
+### 1. Ultrasoon sensoren (15 punten)
+- Custom AXI IP blok(ken) voor ultrasoon sensoren
+- **Moet klaar zijn:** SoC hardware platform, C code
+- **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
 
-Moet klaar zijn:
+### 2. Snelheidssensoren & Motor Control (10 punten)
+- Custom AXI IP blok voor snelheidssensoren, motor control via AXI/Timer blok
+- **Moet klaar zijn:** SoC hardware platform, C code (sensordata + PWM motorsturing)
+- **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
+- **Referenties:**  
+  - [SEN-Speed Manual](https://joy-it.net/files/files/Produkte/SEN-Speed/SEN-Speed-Manual-20201015.pdf)  
+  - [TI LM393](https://www.ti.com/product/LM393)
+  - **[Arduino demo code](#)**
 
-SoC hardware platform
-C code voor uitlezen van de ultrasoonsensoren
+### 3. IMU uitlezen (10 punten)
+- AXI IP of PS-gebaseerde uitlezing van MPU-6050 IMU
+- **Moet klaar zijn:** SoC hardware platform, C code
+- **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
+- **Referenties:**  
+  - [MPU-6050 Info](https://www.amazon.de/dp/B07NP2WF7J/)  
+  - [MiniZED I2C PL](https://github.com/cteqeu/SoC/tree/master/MiniZED/eFPGA_I2C_PL)  
+  - [MiniZED I2C PS](https://github.com/cteqeu/SoC/tree/master/MiniZED/eFPGA_I2C_PS)  
+  - **[MPU-6050 voorbeeldcode](https://electrosome.com/interfacing-mpu-6050-gy-521-arduino-uno/)**
 
+### 4. Autonoom rijden (25 punten)
+- De wagen moet autonoom rijden binnen een parcours
+- **Moet klaar zijn:** SoC hardware platform, C code
+- **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
 
-Opleveren:
-
-pdf blokdesign
-Link naar github repo/commit
-youtube demo
