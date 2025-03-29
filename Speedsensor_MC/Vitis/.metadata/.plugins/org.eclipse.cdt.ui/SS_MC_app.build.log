@@ -1,0 +1,30 @@
+02:35:01 **** Incremental Build of configuration Debug for project SS_MC_app ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/devWorks/SS_MC_SOC/Vitis/Speed_sensor_Motor_control/export/Speed_sensor_Motor_control/sw/Speed_sensor_Motor_control/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/devWorks/SS_MC_SOC/Vitis/Speed_sensor_Motor_control/export/Speed_sensor_Motor_control/sw/Speed_sensor_Motor_control/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: SS_MC_app.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/devWorks/SS_MC_SOC/Vitis/Speed_sensor_Motor_control/export/Speed_sensor_Motor_control/sw/Speed_sensor_Motor_control/standalone_ps7_cortexa9_0/bsplib/lib -o "SS_MC_app.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: SS_MC_app.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size SS_MC_app.elf  |tee "SS_MC_app.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  32207	   1944	  22656	  56807	   dde7	SS_MC_app.elf
+'Finished building: SS_MC_app.elf.size'
+' '
+
+02:35:04 Build Finished (took 2s.321ms)
+

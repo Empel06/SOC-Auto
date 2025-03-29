@@ -1,0 +1,28 @@
+
+*** Running vivado
+    with args -log design_1_SpeedSensor_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_SpeedSensor_0_0.tcl
+
+
+
+****** Vivado v2024.1 (64-bit)
+  **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+  **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+  **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+  **** Start of session at: Sat Mar 29 01:56:48 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source design_1_SpeedSensor_0_0.tcl -notrace
+create_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 486.051 ; gain = 200.535
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/devWorks/ip_repo/SpeedSensor_1_0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2024.1/data/ip'.
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: design_1_SpeedSensor_0_0
+INFO: [IP_Flow 19-6922] IPCACHE: Exporting cached entry 58c653a1bdbf0529 to dir: C:/devWorks/SS_MC_SOC/SS_MC_SOC.runs/design_1_SpeedSensor_0_0_synth_1
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/devWorks/SS_MC_SOC/SS_MC_SOC.cache/ip/2024.1/5/8/58c653a1bdbf0529/design_1_SpeedSensor_1_0.dcp to C:/devWorks/SS_MC_SOC/SS_MC_SOC.runs/design_1_SpeedSensor_0_0_synth_1/design_1_SpeedSensor_0_0.dcp.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/devWorks/SS_MC_SOC/SS_MC_SOC.cache/ip/2024.1/5/8/58c653a1bdbf0529/design_1_SpeedSensor_1_0_sim_netlist.v to C:/devWorks/SS_MC_SOC/SS_MC_SOC.runs/design_1_SpeedSensor_0_0_synth_1/design_1_SpeedSensor_0_0_sim_netlist.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/devWorks/SS_MC_SOC/SS_MC_SOC.cache/ip/2024.1/5/8/58c653a1bdbf0529/design_1_SpeedSensor_1_0_sim_netlist.vhdl to C:/devWorks/SS_MC_SOC/SS_MC_SOC.runs/design_1_SpeedSensor_0_0_synth_1/design_1_SpeedSensor_0_0_sim_netlist.vhdl.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/devWorks/SS_MC_SOC/SS_MC_SOC.cache/ip/2024.1/5/8/58c653a1bdbf0529/design_1_SpeedSensor_1_0_stub.v to C:/devWorks/SS_MC_SOC/SS_MC_SOC.runs/design_1_SpeedSensor_0_0_synth_1/design_1_SpeedSensor_0_0_stub.v.
+INFO: [IP_Flow 19-6928] IPCACHE: copied cached file c:/devWorks/SS_MC_SOC/SS_MC_SOC.cache/ip/2024.1/5/8/58c653a1bdbf0529/design_1_SpeedSensor_1_0_stub.vhdl to C:/devWorks/SS_MC_SOC/SS_MC_SOC.runs/design_1_SpeedSensor_0_0_synth_1/design_1_SpeedSensor_0_0_stub.vhdl.
+INFO: [IP_Flow 19-4838] Using cached IP synthesis design for IP design_1_SpeedSensor_0_0, cache-ID = 58c653a1bdbf0529.
+INFO: [Common 17-206] Exiting Vivado at Sat Mar 29 01:57:07 2025...

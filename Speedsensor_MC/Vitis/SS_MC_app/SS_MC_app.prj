@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="ASCII"?>
+<sdkproject:SdkProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:sdkproject="http://www.xilinx.com/sdkproject" name="SS_MC_app" location="C:/devWorks/SS_MC_SOC/Vitis/SS_MC_app" platform="C:/devWorks/SS_MC_SOC/Vitis/Speed_sensor_Motor_control/export/Speed_sensor_Motor_control/Speed_sensor_Motor_control.xpfm" platformUID="xilinx:pynq-z2::0.0(custom)" systemProject="SS_MC_app_system" sysConfig="Speed_sensor_Motor_control" runtime="cpp" cpu="standalone_ps7_cortexa9_0" cpuInstance="ps7_cortexa9_0" os="standalone" mssSignature="055b5620348c1d4c5c229ff4dd675656">
+  <configuration name="Debug" id="xilinx.gnu.armv7.exe.debug.1024603523">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+    <lastBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <configuration name="Release" id="xilinx.gnu.armv7.exe.release.1393541178" dirty="true">
+    <configBuildOptions xsi:type="sdkproject:SdkOptions"/>
+  </configuration>
+  <template appTemplateName="hello_world"/>
+</sdkproject:SdkProject>
