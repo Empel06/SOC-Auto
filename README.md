@@ -18,6 +18,7 @@ De wagen moet autonoom rijden binnen een parcours en aantonen dat alle deelopdra
 - **Moet klaar zijn:** SoC hardware platform, C code (sensordata + PWM motorsturing)
 - **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
 [Snelheidssensoren & Motor Control Video](https://youtu.be/CrCh2be9bAA)
+[Blokdesign](https://github.com/Empel06/SOC-Auto/blob/main/Speedsensor_MC/BD-SS_MC.pdf)
 - **Referenties:**  
   - [SEN-Speed Manual](https://joy-it.net/files/files/Produkte/SEN-Speed/SEN-Speed-Manual-20201015.pdf)  
   - [TI LM393](https://www.ti.com/product/LM393)
