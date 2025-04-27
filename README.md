@@ -17,6 +17,7 @@ De wagen moet autonoom rijden binnen een parcours en aantonen dat alle deelopdra
 - Custom AXI IP blok voor snelheidssensoren, motor control via AXI/Timer blok
 - **Moet klaar zijn:** SoC hardware platform, C code (sensordata + PWM motorsturing)
 - **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
+[Snelheidssensoren & Motor Control Video](https://youtu.be/CrCh2be9bAA)
 - **Referenties:**  
   - [SEN-Speed Manual](https://joy-it.net/files/files/Produkte/SEN-Speed/SEN-Speed-Manual-20201015.pdf)  
   - [TI LM393](https://www.ti.com/product/LM393)
