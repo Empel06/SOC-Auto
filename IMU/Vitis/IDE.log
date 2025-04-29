@@ -1,0 +1,26 @@
+22:14:41 DEBUG : Logs will be stored at 'C:/devWorks/IMU_SOC/Vitis/IDE.log'.
+22:14:45 INFO  : Platform repository initialization has completed.
+22:14:45 INFO  : Registering command handlers for Vitis TCF services
+22:14:45 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\devWorks\IMU_SOC\Vitis\temp_xsdb_launch_script.tcl
+22:14:45 ERROR : (XSDB Server)'\gnu\microblaze\lin\bin\' is not recognized as an internal or external command,
+operable program or batch file.
+
+22:14:45 ERROR : (XSDB Server)'\gnu\microblaze\nt\bin\' is not recognized as an internal or external command,
+operable program or batch file.
+
+22:14:45 ERROR : (XSDB Server)'\gnuwin\bin\' is not recognized as an internal or external command,
+operable program or batch file.
+
+22:14:50 INFO  : XSCT server has started successfully.
+22:14:55 INFO  : Successfully done setting XSCT server connection channel  
+22:14:55 INFO  : plnx-install-location is set to ''
+22:14:55 INFO  : Successfully done query RDI_DATADIR 
+22:14:55 INFO  : Successfully done setting workspace for the tool. 
+22:16:02 INFO  : Result from executing command 'getProjects': IMU_SOC
+22:16:02 INFO  : Result from executing command 'getPlatforms': 
+22:16:02 WARN  : An unexpected exception occurred in the module 'platform project logging'
+22:16:03 INFO  : Platform 'IMU_SOC' is added to custom repositories.
+22:16:15 INFO  : Platform 'IMU_SOC' is added to custom repositories.
+22:18:47 INFO  : Result from executing command 'getProjects': IMU_SOC
+22:18:47 INFO  : Result from executing command 'getPlatforms': IMU_SOC|C:/devWorks/IMU_SOC/Vitis/IMU_SOC/export/IMU_SOC/IMU_SOC.xpfm
+22:18:48 INFO  : Checking for BSP changes to sync application flags for project 'IMU_SOC_app'...
