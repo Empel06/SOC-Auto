@@ -28,6 +28,8 @@ De wagen moet autonoom rijden binnen een parcours en aantonen dat alle deelopdra
 - AXI IP of PS-gebaseerde uitlezing van MPU-6050 IMU
 - **Moet klaar zijn:** SoC hardware platform, C code
 - **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
+
+[Blokdesign](https://github.com/Empel06/SOC-Auto/blob/main/IMU/BD-IMU.pdf)
 - **Referenties:**  
   - [MPU-6050 Info](https://www.amazon.de/dp/B07NP2WF7J/)  
   - [MiniZED I2C PL](https://github.com/cteqeu/SoC/tree/master/MiniZED/eFPGA_I2C_PL)  
