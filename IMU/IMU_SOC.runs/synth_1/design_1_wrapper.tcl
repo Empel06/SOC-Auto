@@ -56,6 +56,7 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -76,13 +77,13 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_vhdl -library xil_defaultlib c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/hdl/design_1_wrapper.vhd
 add_files C:/devWorks/IMU_SOC/IMU_SOC.srcs/sources_1/bd/design_1/design_1.bd
-set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_0/design_1_processing_system7_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0.xdc]
-set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_proc_sys_reset_0_0/design_1_proc_sys_reset_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0_board.xdc]
-set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_0/design_1_axi_iic_0_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_processing_system7_0_1/design_1_processing_system7_0_1.xdc]
+set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_1/design_1_axi_iic_0_1_board.xdc]
+set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_axi_iic_0_1/design_1_axi_iic_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_auto_pc_1/design_1_auto_pc_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_board.xdc]
+set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0.xdc]
+set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/ip/design_1_rst_ps7_0_100M_0/design_1_rst_ps7_0_100M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/devWorks/IMU_SOC/IMU_SOC.gen/sources_1/bd/design_1/design_1_ooc.xdc]
 
 OPTRACE "Adding files" END { }

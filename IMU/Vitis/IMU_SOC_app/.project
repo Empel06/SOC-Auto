@@ -3,7 +3,7 @@
 	<name>IMU_SOC_app</name>
 	<comment>Created by Vitis v2024.1</comment>
 	<projects>
-		<project>IMU_SOC</project>
+		<project>design_1_wrapper</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
