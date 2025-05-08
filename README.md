@@ -29,6 +29,7 @@ De wagen moet autonoom rijden binnen een parcours en aantonen dat alle deelopdra
 - **Moet klaar zijn:** SoC hardware platform, C code
 - **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
 
+[IMU Video](https://youtu.be/oD5EQJgtUBY)
 [Blokdesign](https://github.com/Empel06/SOC-Auto/blob/main/IMU/BD-IMU.pdf)
 - **Referenties:**  
   - [MPU-6050 Info](https://www.amazon.de/dp/B07NP2WF7J/)  

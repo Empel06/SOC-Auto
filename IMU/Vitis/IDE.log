@@ -132,3 +132,115 @@ con
 ----------------End of Script----------------
 
 12:20:40 INFO  : Launch script is exported to file 'C:\devWorks\IMU_SOC\Vitis\IMU_SOC_app_system\_ide\scripts\debugger_imu_soc_app-default.tcl'
+12:26:20 INFO  : Disconnected from the channel tcfchan#3.
+10:18:17 DEBUG : Logs will be stored at 'C:/devWorks/IMU_SOC/Vitis/IDE.log'.
+10:18:18 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\devWorks\IMU_SOC\Vitis\temp_xsdb_launch_script.tcl
+10:18:19 ERROR : (XSDB Server)'\gnu\microblaze\lin\bin\' is not recognized as an internal or external command,
+operable program or batch file.
+
+10:18:19 ERROR : (XSDB Server)'\gnu\microblaze\nt\bin\' is not recognized as an internal or external command,
+operable program or batch file.
+
+10:18:19 ERROR : (XSDB Server)'\gnuwin\bin\' is not recognized as an internal or external command,
+operable program or batch file.
+
+10:18:22 INFO  : XSCT server has started successfully.
+10:18:22 INFO  : plnx-install-location is set to ''
+10:18:22 INFO  : Successfully done setting XSCT server connection channel  
+10:18:22 INFO  : Successfully done setting workspace for the tool. 
+10:18:23 INFO  : Platform repository initialization has completed.
+10:18:23 INFO  : Registering command handlers for Vitis TCF services
+10:18:27 INFO  : Successfully done query RDI_DATADIR 
+10:19:33 INFO  : Checking for BSP changes to sync application flags for project 'IMU_SOC_app'...
+10:20:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:20:08 INFO  : Jtag cable 'Xilinx HW-FTDI-TEST FT2232H 1234-tulA' is selected.
+10:20:09 INFO  : 'jtag frequency' command is executed.
+10:20:09 INFO  : Context for 'APU' is selected.
+10:20:09 INFO  : System reset is completed.
+10:20:12 INFO  : 'after 3000' command is executed.
+10:20:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}' command is executed.
+10:20:14 INFO  : Device configured successfully with "C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/_ide/bitstream/design_1_wrapper.bit"
+10:20:14 INFO  : Context for 'APU' is selected.
+10:20:14 INFO  : Hardware design and registers information is loaded from 'C:/devWorks/IMU_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:20:14 INFO  : 'configparams force-mem-access 1' command is executed.
+10:20:14 INFO  : Context for 'APU' is selected.
+10:20:14 INFO  : Sourcing of 'C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/_ide/psinit/ps7_init.tcl' is done.
+10:20:15 INFO  : 'ps7_init' command is executed.
+10:20:15 INFO  : 'ps7_post_config' command is executed.
+10:20:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:15 INFO  : The application 'C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/Debug/IMU_SOC_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:20:15 INFO  : 'configparams force-mem-access 0' command is executed.
+10:20:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}
+fpga -file C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/devWorks/IMU_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/Debug/IMU_SOC_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:20:16 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:16 INFO  : 'con' command is executed.
+10:20:16 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:20:16 INFO  : Launch script is exported to file 'C:\devWorks\IMU_SOC\Vitis\IMU_SOC_app_system\_ide\scripts\debugger_imu_soc_app-default.tcl'
+10:22:50 INFO  : Disconnected from the channel tcfchan#1.
+10:23:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:23:15 INFO  : Jtag cable 'Xilinx HW-FTDI-TEST FT2232H 1234-tulA' is selected.
+10:23:15 INFO  : 'jtag frequency' command is executed.
+10:23:15 INFO  : Context for 'APU' is selected.
+10:23:15 INFO  : System reset is completed.
+10:23:18 INFO  : 'after 3000' command is executed.
+10:23:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}' command is executed.
+10:23:21 INFO  : Device configured successfully with "C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/_ide/bitstream/design_1_wrapper.bit"
+10:23:21 INFO  : Context for 'APU' is selected.
+10:23:24 INFO  : Hardware design and registers information is loaded from 'C:/devWorks/IMU_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:23:24 INFO  : 'configparams force-mem-access 1' command is executed.
+10:23:25 INFO  : Context for 'APU' is selected.
+10:23:25 INFO  : Sourcing of 'C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/_ide/psinit/ps7_init.tcl' is done.
+10:23:25 INFO  : 'ps7_init' command is executed.
+10:23:25 INFO  : 'ps7_post_config' command is executed.
+10:23:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:23:25 INFO  : The application 'C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/Debug/IMU_SOC_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:23:25 INFO  : 'configparams force-mem-access 0' command is executed.
+10:23:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}
+fpga -file C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/devWorks/IMU_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/devWorks/IMU_SOC/Vitis/IMU_SOC_app/Debug/IMU_SOC_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:23:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:23:26 INFO  : 'con' command is executed.
+10:23:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:23:26 INFO  : Launch script is exported to file 'C:\devWorks\IMU_SOC\Vitis\IMU_SOC_app_system\_ide\scripts\debugger_imu_soc_app-default.tcl'
+10:54:19 INFO  : Disconnected from the channel tcfchan#2.

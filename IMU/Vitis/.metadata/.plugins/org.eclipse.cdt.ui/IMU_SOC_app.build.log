@@ -1,4 +1,4 @@
-12:18:18 **** Incremental Build of configuration Debug for project IMU_SOC_app ****
+10:19:37 **** Incremental Build of configuration Debug for project IMU_SOC_app ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -9,20 +9,6 @@ make --no-print-directory main-build
 arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/devWorks/IMU_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
 'Finished building: ../src/helloworld.c'
 ' '
-'Building file: ../src/lis2ds12_pl.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lis2ds12_pl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/devWorks/IMU_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/lis2ds12_pl.d" -MT"src/lis2ds12_pl.o" -o "src/lis2ds12_pl.o" "../src/lis2ds12_pl.c"
-../src/lis2ds12_pl.c: In function 'pollForAccel':
-../src/lis2ds12_pl.c:181:21: warning: variable 'iacceleration_Z' set but not used [-Wunused-but-set-variable]
-  181 |                 int iacceleration_Z;
-      |                     ^~~~~~~~~~~~~~~
-'Finished building: ../src/lis2ds12_pl.c'
-' '
-'Building file: ../src/platform.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/devWorks/IMU_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
-'Finished building: ../src/platform.c'
-' '
 'Building target: IMU_SOC_app.elf'
 'Invoking: ARM v7 gcc linker'
 arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/devWorks/IMU_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "IMU_SOC_app.elf"  ./src/helloworld.o ./src/lis2ds12_pl.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
@@ -31,9 +17,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size IMU_SOC_app.elf  |tee "IMU_SOC_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  56103	   2584	  23384	  82071	  14097	IMU_SOC_app.elf
+  56039	   2584	  23384	  82007	  14057	IMU_SOC_app.elf
 'Finished building: IMU_SOC_app.elf.size'
 ' '
 
-12:18:20 Build Finished (took 1s.474ms)
+10:19:39 Build Finished (took 2s.24ms)
 

@@ -22,9 +22,9 @@ int tcal = -1600;
 int GyXcal = 480, GyYcal = 170, GyZcal = 210;
 double t, tx, pitch, roll;
 
-/*******************************************************************
- * Function to Calculate Pitch and Roll Angles from Accelerometer  *
- *******************************************************************/
+/***
+
+Function to Calculate Pitch and Roll Angles from Accelerometer  ****/
 void getAngle(int Ax, int Ay, int Az) {
     pitch = atan((double)Ax / sqrt(Ay * Ay + Az * Az)) * 180.0 / M_PI;
     roll = atan((double)Ay / sqrt(Ax * Ax + Az * Az)) * 180.0 / M_PI;
@@ -56,8 +56,7 @@ int main() {
     // Display startup messages
     printf("Hello World\n\r");
     printf("Successfully ran Hello World application\n\r");
-
-    // Main loop for continuous sensor reading and display
+// Main loop for continuous sensor reading and display
     while (1) {
         // Send read command to MPU
         XIic_Send(XPAR_IIC_0_BASEADDR, MPU6050_I2C_ADDRESS, MPU_read, 1, XIIC_REPEATED_START);
@@ -86,6 +85,9 @@ int main() {
         printf("Accelerometer: X = %d Y = %d Z = %d\n\r", (AcX + AcXcal), (AcY + AcYcal), (AcZ + AcZcal));
         printf("Temperature in Celsius = %.2f\n\r", t);
         printf("Gyroscope: X = %d Y = %d Z = %d\n\r", (GyX + GyXcal), (GyY + GyYcal), (GyZ + GyZcal));
+
+        // Clear terminal screen and wait for a second
+        printf("\033[H");
         sleep(1);
     }
 
