@@ -41,4 +41,4 @@ De wagen moet autonoom rijden binnen een parcours en aantonen dat alle deelopdra
 - De wagen moet autonoom rijden binnen een parcours
 - **Moet klaar zijn:** SoC hardware platform, C code
 - **Opleveren:** PDF blokdesign, GitHub commit, YouTube demo
-
+[Blokdesign](./Final/VolledigeAuto-BD.pdf)

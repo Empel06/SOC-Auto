@@ -1,0 +1,74 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.459381",
+   "Default View_TopLeft":"-651,-233",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0 threadsafe
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 1240 -y 250 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1240 -y 270 -defaultsOSRD
+preplace port GPIO_0 -pg 1 -lvl 4 -x 1240 -y 510 -defaultsOSRD
+preplace port IIC_0_0 -pg 1 -lvl 4 -x 1240 -y 290 -defaultsOSRD
+preplace port IIC_0 -pg 1 -lvl 4 -x 1240 -y 60 -defaultsOSRD
+preplace port port-id_Sensor_Pin_0 -pg 1 -lvl 0 -x -10 -y 960 -defaultsOSRD
+preplace port port-id_Sensor_Pin_1 -pg 1 -lvl 0 -x -10 -y 1120 -defaultsOSRD
+preplace port port-id_sonar_echo_0 -pg 1 -lvl 0 -x -10 -y 1480 -defaultsOSRD
+preplace port port-id_sonar_echo_1 -pg 1 -lvl 0 -x -10 -y 1660 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x -10 -y 1300 -defaultsOSRD
+preplace port port-id_sonar_trig_0 -pg 1 -lvl 4 -x 1240 -y 1480 -defaultsOSRD
+preplace port port-id_sonar_trig_1 -pg 1 -lvl 4 -x 1240 -y 1660 -defaultsOSRD
+preplace port port-id_pwm0_0 -pg 1 -lvl 4 -x 1240 -y 870 -defaultsOSRD
+preplace port port-id_pwm0_1 -pg 1 -lvl 4 -x 1240 -y 1300 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 3 -x 1010 -y 300 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 540 -y 690 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 530 -defaultsOSRD
+preplace inst SpeedSensor_0 -pg 1 -lvl 3 -x 1010 -y 670 -defaultsOSRD
+preplace inst SpeedSensor_1 -pg 1 -lvl 3 -x 1010 -y 1070 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 3 -x 1010 -y 860 -defaultsOSRD
+preplace inst axi_timer_1 -pg 1 -lvl 3 -x 1010 -y 1290 -defaultsOSRD
+preplace inst ultrasoon_0 -pg 1 -lvl 3 -x 1010 -y 1480 -defaultsOSRD
+preplace inst ultrasoon_1 -pg 1 -lvl 3 -x 1010 -y 1660 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -x 1010 -y 510 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 540 -y 1300 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 2 -x 540 -y 1050 -defaultsOSRD
+preplace inst axi_iic_0 -pg 1 -lvl 3 -x 1010 -y 80 -defaultsOSRD
+preplace netloc Sensor_Pin_0_1 1 0 3 10J 400 NJ 400 800J
+preplace netloc Sensor_Pin_1_1 1 0 3 20J 980 NJ 980 700J
+preplace netloc sonar_echo_0_1 1 0 3 NJ 1480 NJ 1480 NJ
+preplace netloc sonar_echo_1_1 1 0 3 NJ 1660 NJ 1660 NJ
+preplace netloc clk_wiz_0_clk_out1 1 2 1 810 650n
+preplace netloc xlconcat_0_dout 1 2 1 780 300n
+preplace netloc sys_clock_1 1 0 2 NJ 1300 NJ
+preplace netloc ultrasoon_0_sonar_trig 1 3 1 NJ 1480
+preplace netloc ultrasoon_1_sonar_trig 1 3 1 NJ 1660
+preplace netloc axi_timer_0_pwm0 1 3 1 NJ 870
+preplace netloc axi_timer_1_pwm0 1 3 1 NJ 1300
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 380 430 770
+preplace netloc Net 1 0 4 30 630 370 390 760 180 1210
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 4 20 410 NJ 410 790J 430 1210
+preplace netloc axi_timer_0_interrupt 1 1 3 390 970 NJ 970 1210
+preplace netloc axi_timer_1_interrupt 1 1 3 390 1170 NJ 1170 1210
+preplace netloc axi_iic_0_iic2intc_irpt 1 2 2 810 160 1210
+preplace netloc processing_system7_0_DDR 1 3 1 1220J 250n
+preplace netloc processing_system7_0_FIXED_IO 1 3 1 1220J 270n
+preplace netloc axi_gpio_0_GPIO 1 3 1 NJ 510
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 790 620n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 730 640n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 750 630n
+preplace netloc ps7_0_axi_periph_M03_AXI 1 2 1 750 680n
+preplace netloc ps7_0_axi_periph_M04_AXI 1 2 1 710 700n
+preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 690 720n
+preplace netloc ps7_0_axi_periph_M06_AXI 1 2 1 740 490n
+preplace netloc S00_AXI_1 1 1 3 390 420 NJ 420 1220
+preplace netloc axi_iic_0_IIC 1 3 1 NJ 60
+preplace netloc ps7_0_axi_periph_M07_AXI 1 2 1 720 60n
+levelinfo -pg 1 -10 200 540 1010 1240
+pagesize -pg 1 -db -bbox -sgen -150 0 1370 1760
+"
+}
+{
+   "da_axi4_cnt":"16",
+   "da_board_cnt":"3",
+   "da_clkrst_cnt":"4",
+   "da_ps7_cnt":"1"
+}

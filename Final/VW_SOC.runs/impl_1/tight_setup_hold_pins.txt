@@ -1,0 +1,10 @@
++====================+===============================+==================================================================================================+
+| Launch Setup Clock | Launch Hold Clock             | Pin                                                                                              |
++====================+===============================+==================================================================================================+
+| clk_fpga_0         | clk_out1_design_1_clk_wiz_0_0 | design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/skid_buffer_reg[4]/D  |
+| clk_fpga_0         | clk_out1_design_1_clk_wiz_0_0 | design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/skid_buffer_reg[8]/D  |
+| clk_fpga_0         | clk_out1_design_1_clk_wiz_0_0 | design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[4]/D  |
+| clk_fpga_0         | clk_out1_design_1_clk_wiz_0_0 | design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[8]/D  |
+| clk_fpga_0         | clk_out1_design_1_clk_wiz_0_0 | design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/skid_buffer_reg[10]/D |
+| clk_fpga_0         | clk_out1_design_1_clk_wiz_0_0 | design_1_i/ps7_0_axi_periph/xbar/inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg[10]/D |
++--------------------+-------------------------------+--------------------------------------------------------------------------------------------------+
