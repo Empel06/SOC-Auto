@@ -1,28 +1,61 @@
 Nothing to build in platform 'design_1_wrapper'
 
-12:16:55 **** Incremental Build of configuration Debug for project VW_SOC_app ****
+10:22:06 **** Incremental Build of configuration Debug for project VW_SOC_app ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
 ' '
 make --no-print-directory main-build
-'Building file: ../src/lis2ds12_pl.c'
+'Building file: ../src/helloworld.c'
 'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/lis2ds12_pl.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/lis2ds12_pl.d" -MT"src/lis2ds12_pl.o" -o "src/lis2ds12_pl.o" "../src/lis2ds12_pl.c"
-../src/lis2ds12_pl.c: In function 'pollForAccel':
-../src/lis2ds12_pl.c:181:21: warning: variable 'iacceleration_Z' set but not used [-Wunused-but-set-variable]
-  181 |                 int iacceleration_Z;
-      |                     ^~~~~~~~~~~~~~~
-'Finished building: ../src/lis2ds12_pl.c'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -IC:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'xTmrCtr_Int_Handler':
+../src/helloworld.c:56:9: warning: unused variable 'CounterValue' [-Wunused-variable]
+   56 |     u32 CounterValue = XTmrCtr_GetValue(InstancePtr, TmrCtrNumber);
+      |         ^~~~~~~~~~~~
+../src/helloworld.c: In function 'getAngle':
+../src/helloworld.c:83:13: warning: implicit declaration of function 'atan' [-Wimplicit-function-declaration]
+   83 |     pitch = atan((double)Ax / sqrt(Ay * Ay + Az * Az)) * 180.0 / M_PI;
+      |             ^~~~
+../src/helloworld.c:9:1: note: include '<math.h>' or provide a declaration of 'atan'
+    8 | #include "xiic.h"
+  +++ |+#include <math.h>
+    9 | 
+../src/helloworld.c:83:13: warning: incompatible implicit declaration of built-in function 'atan' [-Wbuiltin-declaration-mismatch]
+   83 |     pitch = atan((double)Ax / sqrt(Ay * Ay + Az * Az)) * 180.0 / M_PI;
+      |             ^~~~
+../src/helloworld.c:83:13: note: include '<math.h>' or provide a declaration of 'atan'
+../src/helloworld.c:83:31: warning: implicit declaration of function 'sqrt' [-Wimplicit-function-declaration]
+   83 |     pitch = atan((double)Ax / sqrt(Ay * Ay + Az * Az)) * 180.0 / M_PI;
+      |                               ^~~~
+../src/helloworld.c:83:31: note: include '<math.h>' or provide a declaration of 'sqrt'
+../src/helloworld.c:83:31: warning: incompatible implicit declaration of built-in function 'sqrt' [-Wbuiltin-declaration-mismatch]
+../src/helloworld.c:83:31: note: include '<math.h>' or provide a declaration of 'sqrt'
+../src/helloworld.c: In function 'xTmrCtr_Init':
+../src/helloworld.c:129:17: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  129 |     int Status, DutyCycle;
+      |                 ^~~~~~~~~
+../src/helloworld.c: In function 'Turn_Right_Pulses':
+../src/helloworld.c:230:9: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  230 |         usleep(100000);
+      |         ^~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:251:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+  251 |     init_platform();
+      |     ^~~~~~~~~~~~~
+../src/helloworld.c:287:9: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+  287 |         cleanup_platform();
+      |         ^~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
 ' '
 'Building target: VW_SOC_app.elf'
 'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "VW_SOC_app.elf"  ./src/helloworld.o ./src/lis2ds12_pl.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LC:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/sw/design_1_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "VW_SOC_app.elf"  ./src/helloworld.o ./src/lis2ds12_pl.o ./src/platform.o   -lm -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
 'Finished building target: VW_SOC_app.elf'
 ' '
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size VW_SOC_app.elf  |tee "VW_SOC_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  53863	   2552	  23320	  79735	  13777	VW_SOC_app.elf
+  70347	   3408	  23488	  97243	  17bdb	VW_SOC_app.elf
 'Finished building: VW_SOC_app.elf.size'
 ' '

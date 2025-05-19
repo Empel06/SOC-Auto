@@ -26,3 +26,222 @@ operable program or batch file.
 12:15:38 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
 12:15:49 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
 12:16:55 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:11:30 DEBUG : Logs will be stored at 'C:/devWorks/VW_SOC/Vitis/IDE.log'.
+09:11:31 INFO  : Launching XSCT server: xsct.bat -n  -interactive C:\devWorks\VW_SOC\Vitis\temp_xsdb_launch_script.tcl
+09:11:31 ERROR : (XSDB Server)'\gnu\microblaze\lin\bin\' is not recognized as an internal or external command,
+operable program or batch file.
+
+09:11:31 ERROR : (XSDB Server)'\gnu\microblaze\nt\bin\' is not recognized as an internal or external command,
+operable program or batch file.
+
+09:11:31 ERROR : (XSDB Server)'\gnuwin\bin\' is not recognized as an internal or external command,
+operable program or batch file.
+
+09:11:35 INFO  : Platform repository initialization has completed.
+09:11:35 INFO  : Registering command handlers for Vitis TCF services
+09:11:37 INFO  : XSCT server has started successfully.
+09:11:40 INFO  : plnx-install-location is set to ''
+09:11:41 INFO  : Successfully done setting XSCT server connection channel  
+09:11:41 INFO  : Successfully done query RDI_DATADIR 
+09:11:41 INFO  : Successfully done setting workspace for the tool. 
+09:12:52 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:14:32 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:14:46 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:16:05 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:17:02 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:17:34 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:18:00 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:18:28 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:18:49 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:19:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:19:15 INFO  : Jtag cable 'Xilinx HW-FTDI-TEST FT2232H 1234-tulA' is selected.
+09:19:15 INFO  : 'jtag frequency' command is executed.
+09:19:15 INFO  : Context for 'APU' is selected.
+09:19:15 INFO  : System reset is completed.
+09:19:18 INFO  : 'after 3000' command is executed.
+09:19:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}' command is executed.
+09:19:21 INFO  : Device configured successfully with "C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/bitstream/design_1_wrapper.bit"
+09:19:21 INFO  : Context for 'APU' is selected.
+09:19:21 INFO  : Hardware design and registers information is loaded from 'C:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+09:19:21 INFO  : 'configparams force-mem-access 1' command is executed.
+09:19:21 INFO  : Context for 'APU' is selected.
+09:19:21 INFO  : Sourcing of 'C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/psinit/ps7_init.tcl' is done.
+09:19:22 INFO  : 'ps7_init' command is executed.
+09:19:22 INFO  : 'ps7_post_config' command is executed.
+09:19:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:19:22 INFO  : The application 'C:/devWorks/VW_SOC/Vitis/VW_SOC_app/Debug/VW_SOC_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:19:22 INFO  : 'configparams force-mem-access 0' command is executed.
+09:19:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}
+fpga -file C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/devWorks/VW_SOC/Vitis/VW_SOC_app/Debug/VW_SOC_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:19:22 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:19:22 INFO  : 'con' command is executed.
+09:19:22 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:19:22 INFO  : Launch script is exported to file 'C:\devWorks\VW_SOC\Vitis\VW_SOC_app_system\_ide\scripts\debugger_vw_soc_app-default.tcl'
+09:22:13 INFO  : Disconnected from the channel tcfchan#1.
+09:22:38 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:23:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:23:44 INFO  : Jtag cable 'Xilinx HW-FTDI-TEST FT2232H 1234-tulA' is selected.
+09:23:44 INFO  : 'jtag frequency' command is executed.
+09:23:44 INFO  : Context for 'APU' is selected.
+09:23:44 INFO  : System reset is completed.
+09:23:47 INFO  : 'after 3000' command is executed.
+09:23:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}' command is executed.
+09:23:50 INFO  : Device configured successfully with "C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/bitstream/design_1_wrapper.bit"
+09:23:50 INFO  : Context for 'APU' is selected.
+09:23:50 INFO  : Hardware design and registers information is loaded from 'C:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+09:23:50 INFO  : 'configparams force-mem-access 1' command is executed.
+09:23:50 INFO  : Context for 'APU' is selected.
+09:23:50 INFO  : Sourcing of 'C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/psinit/ps7_init.tcl' is done.
+09:23:50 INFO  : 'ps7_init' command is executed.
+09:23:50 INFO  : 'ps7_post_config' command is executed.
+09:23:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:23:50 INFO  : The application 'C:/devWorks/VW_SOC/Vitis/VW_SOC_app/Debug/VW_SOC_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:23:50 INFO  : 'configparams force-mem-access 0' command is executed.
+09:23:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}
+fpga -file C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/devWorks/VW_SOC/Vitis/VW_SOC_app/Debug/VW_SOC_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:23:51 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:23:51 INFO  : 'con' command is executed.
+09:23:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:23:51 INFO  : Launch script is exported to file 'C:\devWorks\VW_SOC\Vitis\VW_SOC_app_system\_ide\scripts\debugger_vw_soc_app-default.tcl'
+09:24:24 INFO  : Disconnected from the channel tcfchan#2.
+09:25:40 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+09:25:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:25:55 INFO  : Jtag cable 'Xilinx HW-FTDI-TEST FT2232H 1234-tulA' is selected.
+09:25:55 INFO  : 'jtag frequency' command is executed.
+09:25:55 INFO  : Context for 'APU' is selected.
+09:25:55 INFO  : System reset is completed.
+09:25:58 INFO  : 'after 3000' command is executed.
+09:25:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}' command is executed.
+09:26:00 INFO  : Device configured successfully with "C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/bitstream/design_1_wrapper.bit"
+09:26:00 INFO  : Context for 'APU' is selected.
+09:26:00 INFO  : Hardware design and registers information is loaded from 'C:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+09:26:00 INFO  : 'configparams force-mem-access 1' command is executed.
+09:26:00 INFO  : Context for 'APU' is selected.
+09:26:00 INFO  : Sourcing of 'C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/psinit/ps7_init.tcl' is done.
+09:26:01 INFO  : 'ps7_init' command is executed.
+09:26:01 INFO  : 'ps7_post_config' command is executed.
+09:26:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:26:01 INFO  : The application 'C:/devWorks/VW_SOC/Vitis/VW_SOC_app/Debug/VW_SOC_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:26:01 INFO  : 'configparams force-mem-access 0' command is executed.
+09:26:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}
+fpga -file C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/devWorks/VW_SOC/Vitis/VW_SOC_app/Debug/VW_SOC_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:26:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:26:01 INFO  : 'con' command is executed.
+09:26:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:26:01 INFO  : Launch script is exported to file 'C:\devWorks\VW_SOC\Vitis\VW_SOC_app_system\_ide\scripts\debugger_vw_soc_app-default.tcl'
+09:26:23 INFO  : Disconnected from the channel tcfchan#3.
+10:04:30 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+10:06:22 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+10:07:39 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+10:09:04 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+10:19:51 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
+10:20:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:20:11 INFO  : Jtag cable 'Xilinx HW-FTDI-TEST FT2232H 1234-tulA' is selected.
+10:20:11 INFO  : 'jtag frequency' command is executed.
+10:20:11 INFO  : Context for 'APU' is selected.
+10:20:11 INFO  : System reset is completed.
+10:20:14 INFO  : 'after 3000' command is executed.
+10:20:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}' command is executed.
+10:20:17 INFO  : Device configured successfully with "C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/bitstream/design_1_wrapper.bit"
+10:20:17 INFO  : Context for 'APU' is selected.
+10:20:17 INFO  : Hardware design and registers information is loaded from 'C:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa'.
+10:20:17 INFO  : 'configparams force-mem-access 1' command is executed.
+10:20:17 INFO  : Context for 'APU' is selected.
+10:20:17 INFO  : Sourcing of 'C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/psinit/ps7_init.tcl' is done.
+10:20:17 INFO  : 'ps7_init' command is executed.
+10:20:17 INFO  : 'ps7_post_config' command is executed.
+10:20:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:17 INFO  : The application 'C:/devWorks/VW_SOC/Vitis/VW_SOC_app/Debug/VW_SOC_app.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:20:17 INFO  : 'configparams force-mem-access 0' command is executed.
+10:20:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Xilinx HW-FTDI-TEST FT2232H 1234-tulA" && level==0 && jtag_device_ctx=="jsn-HW-FTDI-TEST FT2232H-1234-tulA-23727093-0"}
+fpga -file C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/bitstream/design_1_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw C:/devWorks/VW_SOC/Vitis/design_1_wrapper/export/design_1_wrapper/hw/design_1_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source C:/devWorks/VW_SOC/Vitis/VW_SOC_app/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow C:/devWorks/VW_SOC/Vitis/VW_SOC_app/Debug/VW_SOC_app.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:20:18 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:20:18 INFO  : 'con' command is executed.
+10:20:18 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:20:18 INFO  : Launch script is exported to file 'C:\devWorks\VW_SOC\Vitis\VW_SOC_app_system\_ide\scripts\debugger_vw_soc_app-default.tcl'
+10:21:05 INFO  : Disconnected from the channel tcfchan#4.
+10:22:02 INFO  : Checking for BSP changes to sync application flags for project 'VW_SOC_app'...
