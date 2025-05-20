@@ -1,4 +1,4 @@
-02:15:57 **** Incremental Build of configuration Debug for project VW_SOC_app ****
+02:26:46 **** Incremental Build of configuration Debug for project VW_SOC_app ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -35,7 +35,7 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcp
       |                 ^~~~~~~~~
 ../src/helloworld.c: In function 'Turn_Right_Pulses':
 ../src/helloworld.c:232:9: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-  232 |         usleep(10000); // 10 ms
+  232 |         usleep(5000); // 10 ms
       |         ^~~~~~
 ../src/helloworld.c: In function 'main':
 ../src/helloworld.c:270:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
@@ -58,5 +58,5 @@ arm-none-eabi-size VW_SOC_app.elf  |tee "VW_SOC_app.elf.size"
 'Finished building: VW_SOC_app.elf.size'
 ' '
 
-02:15:58 Build Finished (took 1s.536ms)
+02:26:47 Build Finished (took 1s.295ms)
 

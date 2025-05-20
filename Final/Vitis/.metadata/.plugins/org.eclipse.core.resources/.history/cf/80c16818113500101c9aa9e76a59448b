@@ -229,7 +229,7 @@ void Turn_Right_Pulses(int pulses) {
 
     while (Get_Speed_Sensor_Value_1() < initial_pulse_count_1 + pulses && attempts < max_attempts) {
         Motor_Left();
-        usleep(5000); // 10 ms
+        usleep(10000); // 10 ms
         attempts++;
 
         if (Get_Ultrasonic_Distance_0() < 15 || Get_Ultrasonic_Distance_1() < 15) {
@@ -249,7 +249,7 @@ void Turn_Left_Pulses(int pulses) {
 
 	    while (Get_Speed_Sensor_Value_0() < initial_pulse_count_0 + pulses && attempts < max_attempts) {
 	        Motor_Right();
-	        usleep(5000); // 10 ms
+	        usleep(10000); // 10 ms
 	        attempts++;
 
 	        if (Get_Ultrasonic_Distance_1() < 15 || Get_Ultrasonic_Distance_0() < 15) {
