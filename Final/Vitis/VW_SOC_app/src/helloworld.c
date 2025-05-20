@@ -189,11 +189,11 @@ void Motor_Forward() {
 }
 
 void Motor_Right() {
-    XGpio_DiscreteWrite(&Gpio, GPIO_CHANNEL, (1 << IN1_PIN) | (1 << IN3_PIN));
+	XGpio_DiscreteWrite(&Gpio, GPIO_CHANNEL, (1 << IN3_PIN));
 }
 
 void Motor_Left() {
-    XGpio_DiscreteWrite(&Gpio, GPIO_CHANNEL, (1 << IN2_PIN) | (1 << IN4_PIN));
+    XGpio_DiscreteWrite(&Gpio, GPIO_CHANNEL, (1 << IN2_PIN));
 }
 
 /******************* ULTRASONIC SENSOR *******************/
@@ -223,24 +223,43 @@ unsigned int Get_Speed_Sensor_Value_1() {
 
 /******************* TURNING FUNCTIONS *******************/
 void Turn_Right_Pulses(int pulses) {
-    int count = 0;
-    while (count < pulses) {
-        XGpio_DiscreteWrite(&Gpio, GPIO_CHANNEL, (1 << IN1_PIN) | (1 << IN3_PIN)); // Correct GPIO output for right turn
-        count++;
-        usleep(100000);
-    }
-}
-
-void Turn_Left_Pulses(int pulses) {
     int initial_pulse_count_1 = Get_Speed_Sensor_Value_1();
-    while (Get_Speed_Sensor_Value_1() < initial_pulse_count_1 + pulses) {
+    int max_attempts = 1000; // Max iteraties
+    int attempts = 0;
+
+    while (Get_Speed_Sensor_Value_1() < initial_pulse_count_1 + pulses && attempts < max_attempts) {
         Motor_Left();
+        usleep(10000); // 10 ms
+        attempts++;
+
         if (Get_Ultrasonic_Distance_0() < 15 || Get_Ultrasonic_Distance_1() < 15) {
             Motor_Forward();
             initial_pulse_count_1 = Get_Speed_Sensor_Value_1();
         }
     }
+
+    Motor_Forward(); // Ga weer vooruit
 }
+
+
+void Turn_Left_Pulses(int pulses) {
+	    int initial_pulse_count_0 = Get_Speed_Sensor_Value_0();
+	    int max_attempts = 1000; // Max iteraties
+	    int attempts = 0;
+
+	    while (Get_Speed_Sensor_Value_0() < initial_pulse_count_0 + pulses && attempts < max_attempts) {
+	        Motor_Right();
+	        usleep(10000); // 10 ms
+	        attempts++;
+
+	        if (Get_Ultrasonic_Distance_1() < 15 || Get_Ultrasonic_Distance_0() < 15) {
+	            Motor_Forward();
+	            initial_pulse_count_0 = Get_Speed_Sensor_Value_0();
+	        }
+	    }
+
+	    Motor_Forward(); // Ga weer vooruit
+	}
 
 /******************* MAIN FUNCTION *******************/
 int main() {
@@ -326,7 +345,6 @@ int main() {
         // --- IMU LOGICA ---
         read_imu();
 
-        xil_printf("Pitch: %.2f°, Roll: %.2f°\n\r", pitch, roll);
         xil_printf("Accelerometer: X = %d Y = %d Z = %d\n\r", (AcX + AcXcal), (AcY + AcYcal), (AcZ + AcZcal));
         xil_printf("Gyroscoop: X = %d Y = %d Z = %d\n\r", (GyX + GyXcal), (GyY + GyYcal), (GyZ + GyZcal));
 
@@ -344,4 +362,3 @@ int main() {
     cleanup_platform();
     return 0;
 }
-

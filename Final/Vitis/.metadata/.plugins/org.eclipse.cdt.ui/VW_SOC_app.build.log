@@ -1,4 +1,4 @@
-10:22:06 **** Incremental Build of configuration Debug for project VW_SOC_app ****
+02:15:57 **** Incremental Build of configuration Debug for project VW_SOC_app ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
@@ -34,15 +34,15 @@ arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcp
   129 |     int Status, DutyCycle;
       |                 ^~~~~~~~~
 ../src/helloworld.c: In function 'Turn_Right_Pulses':
-../src/helloworld.c:230:9: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
-  230 |         usleep(100000);
+../src/helloworld.c:232:9: warning: implicit declaration of function 'usleep' [-Wimplicit-function-declaration]
+  232 |         usleep(10000); // 10 ms
       |         ^~~~~~
 ../src/helloworld.c: In function 'main':
-../src/helloworld.c:251:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
-  251 |     init_platform();
+../src/helloworld.c:270:5: warning: implicit declaration of function 'init_platform' [-Wimplicit-function-declaration]
+  270 |     init_platform();
       |     ^~~~~~~~~~~~~
-../src/helloworld.c:287:9: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
-  287 |         cleanup_platform();
+../src/helloworld.c:306:9: warning: implicit declaration of function 'cleanup_platform' [-Wimplicit-function-declaration]
+  306 |         cleanup_platform();
       |         ^~~~~~~~~~~~~~~~
 'Finished building: ../src/helloworld.c'
 ' '
@@ -54,9 +54,9 @@ arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=non
 'Invoking: ARM v7 Print Size'
 arm-none-eabi-size VW_SOC_app.elf  |tee "VW_SOC_app.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  70347	   3408	  23488	  97243	  17bdb	VW_SOC_app.elf
+  70387	   3408	  23488	  97283	  17c03	VW_SOC_app.elf
 'Finished building: VW_SOC_app.elf.size'
 ' '
 
-10:22:07 Build Finished (took 1s.222ms)
+02:15:58 Build Finished (took 1s.536ms)
 
