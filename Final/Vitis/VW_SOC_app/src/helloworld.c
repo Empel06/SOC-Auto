@@ -42,7 +42,7 @@ XScuGic xScuGic_Inst;
 #define SPEEDSENSOR_BASEADDR_0 XPAR_SPEEDSENSOR_0_S00_AXI_BASEADDR
 #define SPEEDSENSOR_BASEADDR_1 XPAR_SPEEDSENSOR_1_S00_AXI_BASEADDR
 
-#define TURN_THRESHOLD_CM 25
+#define TURN_THRESHOLD_CM 5
 #define TURN_COUNT_THRESHOLD 2
 
 /******************* IMU DEFINITIONS *******************/
@@ -100,7 +100,7 @@ int init_imu() {
     // Initialisatiecommando sturen
     XIic_Send(XPAR_IIC_0_BASEADDR, MPU6050_I2C_ADDRESS, MPU_init, 2, XIIC_STOP);
 
-    xil_printf("MPU-6050 correct geïnitialiseerd.\n\r");
+    xil_printf("MPU-6050 correct geÃ¯nitialiseerd.\n\r");
     return 0;
 }
 
@@ -312,6 +312,11 @@ int main() {
 
     // Main loop
     while (1) {
+        // --- SPEED SENSOR UITLEZEN ---
+        u32 speedLeft = Get_Speed_Sensor_Value_0();
+        u32 speedRight = Get_Speed_Sensor_Value_1();
+        xil_printf("SpeedSensor: Links = %u, Rechts = %u\n\r", speedLeft, speedRight);
+
         // --- ULTRASOON SENSOR LOGICA ---
         int distance0 = ULTRASOON_mReadReg(XPAR_ULTRASOON_0_S00_AXI_BASEADDR, ULTRASOON_S00_AXI_SLV_REG2_OFFSET);
         int distance1 = ULTRASOON_mReadReg(XPAR_ULTRASOON_1_S00_AXI_BASEADDR, ULTRASOON_S00_AXI_SLV_REG2_OFFSET);
